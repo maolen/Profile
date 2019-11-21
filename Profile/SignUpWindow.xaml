@@ -1,0 +1,58 @@
+﻿<Window x:Class="Profile.UI.SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Profile.UI"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Создать аккаунт"  Height="495" Width="355" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Center" Width="355" Height="459">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="57*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="268*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="68"/>
+        </Grid.RowDefinitions>
+        <Rectangle Height="280" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" Offset="1"/>
+                    <GradientStop Color="#FF33288B" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Height="335" VerticalAlignment="Top" Margin="36,0,35,0" RadiusY="10" RadiusX="10" Fill="White" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Row="1">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid VerticalAlignment="Top" Margin="36,55,35,0" Height="290" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Row="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="13*"/>
+                <RowDefinition Height="277*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="113*"/>
+                <ColumnDefinition Width="165*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Создать аккаунт" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="66,-93,0,0" Foreground="Gray" FontSize="18" Grid.ColumnSpan="2" Height="34" Width="143" Grid.Column="1"/>
+            <StackPanel Grid.ColumnSpan="2"  VerticalAlignment="Top" Margin="8,0,15,0" Height="222" Grid.RowSpan="3" Grid.Column="1">
+                <TextBox x:Name="fullNameTB" materialDesign:HintAssist.Hint="Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="16" Height="40" RenderTransformOrigin="0.514,0.36" />
+                <TextBox x:Name="emailTB" Margin="0,10" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Segoe UI Emoji" FontSize="16" Height="40"/>
+                <PasswordBox x:Name="passwordTB" Margin="0,10" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Segoe UI Emoji" FontSize="16" Height="40"/>
+                <Button  x:Name="signinButton" Visibility="Visible" Content="Создать аккаунт" Style="{StaticResource MaterialDesignRaisedButton}" Height="30" Width="200" ToolTip="Resource name: MaterialDesignRaisedButton" Cursor="Hand" Click="SignUpButtonClick"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
